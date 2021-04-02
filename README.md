@@ -45,5 +45,5 @@
   ```
   3. Connect with your fellow devs! 
 
-Designed in [Figma](figma.com) and Developed using [Next JS](nextjs.org) and [TailwindCSS](tailwindcss.com) with ❤️ by [@crtved](artsandiego.dev)
+Designed in [Figma](https://figma.com/) and Developed using [Next JS](https://nextjs.org/) and [TailwindCSS](https://tailwindcss.com/) with ❤️ by [@crtved](https://artsandiego.dev)
 
