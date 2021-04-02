@@ -65,7 +65,7 @@ export default function Home({ resourcesData }) {
         <meta property="twitter:description" content="A one-stop repository of different resources for Front-End Developers and UI Designers."/>
         <meta property="twitter:image" content="/social-image.png" />
       </Head>
-      <header className="flex flex-col items-center justify-center relative mobile:px-4">
+      <header className="test flex flex-col items-center justify-center relative mobile:px-4">
         <div className="mt-14">
           <Image
             src="/logo.svg"
