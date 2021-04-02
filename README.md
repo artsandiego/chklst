@@ -1,5 +1,5 @@
 # How to contribute
-1. You can contribute by editing [data.js](https://github.com/crtved/prtflio/blob/main/pages/data.js)
+1. You can contribute by editing [data.js](https://github.com/crtved/prtflio/blob/main/components/data.js)
 2. Inside the array, you can add the following object block.
 
 ```

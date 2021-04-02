@@ -2,10 +2,10 @@ import Head from 'next/head'
 import Image from 'next/image'
 import _ from 'lodash'
 import { useEffect } from 'react'
-import data from './data';
+import plainData from '../components/data';
 
 export async function getStaticProps() {
-  const resourcesData = await data;
+  const resourcesData = await plainData;
   
   if (!resourcesData) {
     return {
@@ -102,7 +102,7 @@ export default function Home({ resourcesData }) {
                     <div key={ i } className="bg-secondary p-4 mb-4">
                       <div className="flex flex-row items-start mb-4">
                         <p className="text-white text-14 font-normal w-8/12">{ source.label }</p>
-                        <a className="w-4/12" href={source.url}><img className="ml-auto mr-0" src="/linkout.svg"/></a>
+                        <a className="w-4/12" href={source.url} target="_blank" rel="noopener noreferrer"><img className="ml-auto mr-0" src="/linkout.svg"/></a>
                       </div>
                       <div className="flex flex-row flex-wrap">
                         {source?.tags?.map((tag, i) => (
