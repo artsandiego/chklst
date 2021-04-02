@@ -40,6 +40,7 @@ module.exports = [
         url: '#',
         tags: [
           'behance',
+          'UIUX',
           'youtube',
           'website',
         ]

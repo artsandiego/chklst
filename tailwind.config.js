@@ -2,16 +2,29 @@ module.exports = {
   purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
   darkMode: false, // or 'media' or 'class'
   theme: {
+    screens: {
+      'mobile': '320px',
+      'mobilelg': '600px',
+      'tabletlg': '900px',
+      'sm': '1024px',
+      'md': '1366px',
+      'lg': '1440px',
+      'xl': '1740px',
+    },
     extend: {
       width: {
-        'card': '500px',
+        'card': '354px',
+        'cardsm': '290px'
       },
       height: {
-        'card': '350px',
+        'card': '426px',
+        'meat': '263px',
       }
     },
     fontSize: {
+      '11': '10px',
       '11': '11px',
+      '12': '12px',
       '14': '14px',
       '24': '24px',
       '18': '18px',
