@@ -1,5 +1,6 @@
-# How to contribute
-1. You can contribute by editing [data.js](https://github.com/crtved/prtflio/blob/main/components/data.js)
+# How to contribute 🔥
+
+1. You can contribute by forking this repo and editing [data.js](https://github.com/crtved/prtflio/blob/main/components/data.js) file on your forked repo.
 2. Inside the array, you can add the following object block.
 
 ```
@@ -25,7 +26,8 @@
     {
       label: 'Label or title of resource',
       url: 'link to resource',
-      tags: [ <!-- Add tags to filter your content *NO SPEC CHARACTER -->
+      **<!-- Add tags to filter your content *NO SPEC CHARACTER AND ALL SMALL CAPS -->**
+      tags: [ 
         'youtube',
         'website',
       ]

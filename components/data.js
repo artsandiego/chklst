@@ -41,7 +41,7 @@ const plainData =
         url: 'https://css-tricks.com/snippets/css/complete-guide-grid/',
         tags: [
           'website',
-          'CSS',
+          'css',
         ]
       },
       {
