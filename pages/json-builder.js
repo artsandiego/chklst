@@ -127,15 +127,36 @@ const SourceItem = ({ label, url, tags, setData, idx }) => {
         -
       </button>
       <div className='flex flex-row items-center space-x-2 '>
-        <div className='w-32 p-2 rounded-sm text-12 bg-accent focus:outline-none focus:ring-2 ring-primary ring-opacity-40'>
+        <div className='w-32 p-2 truncate rounded-sm text-12 bg-accent focus:outline-none focus:ring-2 ring-primary ring-opacity-40'>
           {label}
         </div>
         <span className=''>:</span>
-        <div className='w-full p-2 rounded-sm text-12 bg-accent focus:outline-none focus:ring-2 ring-primary ring-opacity-40'>
+        <div className='w-full max-w-sm p-2 truncate rounded-sm text-12 bg-accent focus:outline-none focus:ring-2 ring-primary ring-opacity-40'>
           {url}
         </div>
       </div>
+      {tags.map((t) => (
+        <span className={'bg-accent px-2 py-1 rounded-full shadow text-11'}>
+          {t}
+        </span>
+      ))}
     </div>
+  )
+}
+
+const Tag = ({ tag, onDeleteClick }) => {
+  const [hovered, setHovered] = useState(false)
+
+  return (
+    <span
+      onClick={onDeleteClick}
+      onMouseOver={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+      style={{ background: hovered ? '#e13137' : '#2A3B48' }}
+      className={'px-2 py-1 rounded-full shadow text-11'}
+    >
+      {tag}
+    </span>
   )
 }
 
@@ -211,22 +232,30 @@ const JsonBuilder = () => {
   const [[sourceLabel, sourceUrl, sourceTags], setSourceInput] = useState([
     '',
     '',
-    ['hey', 'test'],
+    [],
   ])
   const [tagInput, setTagInput] = useState()
   const [isModalOpen, setIsModalOpen] = useState(false)
   const onSaveClick = () => {
-    var camelize = function camalize(str) {
+    const camelize = function camalize(str) {
       return str
         .toLowerCase()
         .replace(/[^a-zA-Z0-9]+(.)/g, (m, chr) => chr.toUpperCase())
     }
     const json = JSON.stringify(data)
-    const unquoted = json.replace(/"([^"]+)":/g, '$1:')
     setIsModalOpen(true)
 
-    download(`${camelize(data.name)}.json`, unquoted)
+    download(`${camelize(data.name)}.json`, json)
   }
+
+  const onTagDelete = (index) => {
+    setSourceInput((prev) => [
+      prev[0],
+      prev[1],
+      prev[2].filter((_, idx) => idx !== index),
+    ])
+  }
+
   const onSourcesSubmitClick = () => {
     setData({
       ...data,
@@ -262,14 +291,14 @@ const JsonBuilder = () => {
         <h1 className='my-5 font-bold text-center text-white text-24'>
           JSON Builder
           {/* by{' '}
-          <a className='underline' href='https://romanmunar.netlify.app/'>
+          <a className='underline' href='https://romanmunar.netlify.app/' target="_blank" rel="noopener noreferrer">
             Roman Munar 
           </a>*/}
         </h1>
-        <div className='flex w-full max-w-3xl mx-auto my-5'>
+        <div className='flex w-full max-w-4xl mx-auto my-5'>
           <div
             style={{ height: '100vh' }}
-            className='flex-grow p-3 mr-4 space-y-3 text-white'
+            className='w-full p-3 mr-4 space-y-3 text-white'
           >
             <div className='flex flex-row space-x-4'>
               <h4 className=' text-18'>Name</h4>
@@ -375,12 +404,11 @@ const JsonBuilder = () => {
               <div className='flex justify-between'>
                 <div>
                   {sourceTags.map((s, idx) => (
-                    <span
+                    <Tag
+                      onDeleteClick={() => onTagDelete(idx)}
                       key={idx}
-                      className='px-2 py-1 rounded-full shadow bg-accent text-11'
-                    >
-                      {s}
-                    </span>
+                      tag={s}
+                    />
                   ))}
                 </div>
                 <div className='flex space-x-4'>
