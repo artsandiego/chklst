@@ -54,6 +54,73 @@ const plainData =
       },
     ]
   },
+  {
+    name: 'Stephen Pascual',
+    bio: 'Mid Web Developer, Frustrated Web Developer, Learner',
+    emoji: '🤖🤖',
+    socials: [
+      {
+        label: 'github',
+        url: 'https://github.com/penpencoder'
+      },
+      {
+        label: 'instagram',
+        url: 'https://www.instagram.com/pen_pen_p/'
+      },
+    ],
+    sources: [ /* the main meat */
+      {
+        label: 'Laravel tips',
+        url: 'https://laravel-news.com/eloquent-tips-tricks',
+        tags: [
+          'laravel',
+          'eloquent',
+          'php',
+        ]
+      },
+      {
+        label: 'Gantry 5 - WordPress Framework ',
+        url: 'http://docs.gantry.org/',
+        tags: [
+          'website',
+          'wordpress',
+          'framework',
+          'gantry5',
+        ]
+      },
+      {
+        label: 'Handy VS Code extensions!',
+        url: 'https://www.elegantthemes.com/blog/wordpress/top-vs-code-extensions-for-web-developers',
+        tags: [
+          'vscode',
+          'productivity',
+          'extensions',
+        ]
+      },
+      {
+        label: 'Valet for the win',
+        url: 'https://laravel.com/docs/8.x/valet',
+        tags: [
+          'laravel',
+          'valet',
+        ]
+      },
+      {
+        label: 'Indie Korean Medley by Stephen Pascual',
+        url: 'https://open.spotify.com/playlist/5piE39QVyUtOICchRmFbwR?si=oINbh3aBTiCEoB5QsuQ3PA',
+        tags: [
+          'music',
+        ]
+      },
+      {
+        label: 'Tunes for Coding Otakus',
+        url: 'https://open.spotify.com/playlist/1PgbTul4M3ixTAuCRNK35A?si=3l0IMCwZSd2U4isU_DPqIA',
+        tags: [
+          'music',
+        ]
+      },
+    ]
+  },
   ]
 
   export default plainData;
