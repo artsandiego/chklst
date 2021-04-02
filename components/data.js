@@ -35,7 +35,7 @@ const readAllTheJsonFiles = () => {
     // reading the content 
     const fileContents = fs.readFileSync(filePath, 'utf8');
 
-    // parsing the actual JSON Data
+    // parsing the raw data to actual JSON Format
     return JSON.parse(fileContents)
 
   });
