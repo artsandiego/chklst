@@ -15,6 +15,7 @@ Read the [Contributing guidelines](https://github.com/crtved/chklst/blob/main/CO
 ## Latest Contributors 👏🏻
 - [Stephen Pascual](https://github.com/penpencoder)
 - [Roman Emmanuel](https://github.com/RomanMunar)
+- [Allan Colibao](https://github.com/allancolibao)
 
 <br/>
 
