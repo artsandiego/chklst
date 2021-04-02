@@ -268,6 +268,8 @@ const JsonBuilder = () => {
         },
       ],
     })
+
+    setSourceInput('', '', [])
   }
 
   const onSocialSubmitClick = () => {
@@ -281,6 +283,7 @@ const JsonBuilder = () => {
         },
       ],
     })
+    setSocialInput('', '')
   }
 
   return (
