@@ -1,5 +1,4 @@
 # C H K L S T. ✅
-![visitors](https://visitor-badge.glitch.me/badge?page_id=crtved)
 
 ![alt text](banner.png "CHKLST")
 
