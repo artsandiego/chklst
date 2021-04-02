@@ -120,29 +120,7 @@ const plainData =
         ]
       },
     ]
-    },
-    {
-      name: 'Kestrel',
-      bio: 'Kestrel IMC Corp.',
-      emoji: '🔥',
-      socials: [
-        {
-          label: 'website',
-          url: 'https://artsandiego.dev'
-        }
-      ],
-      sources: [ /* the main meat */
-        {
-          label: 'Laws of UX',
-          url: 'https://lawsofux.com/',
-          tags: [
-            'website',
-            'ui',
-            'ux',
-          ]
-        },
-      ]
-    },
+  },
   ]
 
   export default plainData;
