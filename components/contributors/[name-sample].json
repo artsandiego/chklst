@@ -1,0 +1,22 @@
+{
+  "name": "Full Name or Nickname",
+  "bio": "Short Bio",
+  "emoji": "🔥",
+  "socials": [
+    {
+      "label": "website",
+      "url": "Link of social/website"
+    }
+  ],
+  "sources": [
+    {
+      "label": "Label of the resource",
+      "url": "Link of resource",
+      "tags": [
+        "tag 1",
+        "tag 2",
+        "tag 3"
+      ]
+    }
+  ]
+}

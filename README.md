@@ -2,7 +2,7 @@
 
 ![alt text](banner.png "CHKLST")
 
-CHKLST is a A one-stop repository of different resources for Front-End Developers and UI Designers.
+CHKLST is a one-stop repository of different resources for Front-End Developers and UI Designers.
 
 <br/>
 

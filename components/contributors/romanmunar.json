@@ -1,0 +1,46 @@
+{
+  "name": "Roman Munar",
+  "bio": "A Frontend Developer with a knack for UI Design",
+  "emoji": "👋👋",
+  "socials": [
+    {
+      "label": "github",
+      "url": "https://github.com/romanmunar"
+    },
+    {
+      "label": "website",
+      "url": "https://romanmunar.netlify.app"
+    },
+    {
+      "label": "blog",
+      "url": "https://romanmunar.netlify.app/blog"
+    }
+  ],
+  "sources": [
+    {
+      "label": "CSS Animations for Beginners",
+      "url": "https://romanmunar.netlify.app/blog/all-about-css-animations",
+      "tags": [
+        "animations", 
+        "css"
+      ]
+    },
+    {
+      "label": "Tips to Quickly Improve your UI",
+      "url": "https://romanmunar.netlify.app/blog/5-tips-to-quickly-improve-your-ui",
+      "tags": [
+        "ui",
+        "ux",
+        "guide"
+      ]
+    },
+    {
+      "label": "Typescript for Beginners",
+      "url": "https://romanmunar.netlify.app/blog/introduction-to-typescript-for-javascript-developers",
+      "tags": [
+        "typescript",
+        "guide"
+      ]
+    }
+  ]
+}
