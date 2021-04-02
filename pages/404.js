@@ -23,7 +23,7 @@ export default function Custom404() {
         <meta property="twitter:image" content="/social-image.png" />
       </Head>
       <section className="flex flex-col items-center justify-center w-full h-screen max-h-screen bg-primary">
-        <p className="text-secondary font-normal text-18">Hi stranger, you lost? shhh... it's okay, you can stay if you want.</p>
+        <p className="text-secondary font-normal text-18 text-center px-2">Hi stranger, you lost? shhh... it's okay, you can stay if you want.</p>
       </section>
     </>
   )
