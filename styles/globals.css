@@ -45,3 +45,7 @@ a {
 .cards__item:not(.active) {
   display: none;
 }
+
+.cards__item--links > .cards__item--content:last-of-type {
+  margin-bottom: 0;
+}

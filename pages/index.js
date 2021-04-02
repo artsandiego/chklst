@@ -26,23 +26,17 @@ export default function Home({ resourcesData }) {
     })
   })
 
-  const filterPlease = (e) => {
-    document.querySelectorAll('.cards__item').forEach(ci => {
-      ci.classList.remove('active');
-    })
-    let btnId = e.target.id;
-    let selectedCards = document.querySelectorAll(`.${btnId}`);
-    selectedCards.forEach(sc => {
-      sc.classList.add('active');
-    });
+  const filterByCat = (e) => {
+    document.querySelectorAll('.cards__item').forEach(ci => {ci.classList.remove('active')})
+    let selectedCards = document.querySelectorAll(`.${e.target.id}`);
+    selectedCards.forEach(sc => {sc.classList.add('active');});
   }
 
-  let tagArr = []
+  let tagArr = []; let counts = {};
   resourcesData.map(rd => {rd.sources.map(source => {source.tags.map(tag => {tagArr.push(tag);})})})
-  var counts = {};
   tagArr.forEach(function (x) { counts[x] = (counts[x] || 0) + 1; });
   let filteredTags = _.union(tagArr);
-  console.log('Hello there, are you looking for something? you dirty nerd.')
+  console.log('Hello there, looking for something? you dirty nerd.')
   
   return (
     <>
@@ -67,12 +61,7 @@ export default function Home({ resourcesData }) {
       </Head>
       <header className="flex flex-col items-center justify-center relative mobile:px-4">
         <div className="mt-14">
-          <Image
-            src="/logo.svg"
-            alt="Logo of the portfolio website"
-            width={205}
-            height={41}
-          />
+          <Image src="/logo.svg" alt="Logo of the portfolio website" width={205} height={41} />
         </div>
         <div className="flex flex-col items-center justify-center mobilelg:my-36 mobile:my-20">
           <p className="mobilelg:text-18 mobile:text-14 text-white font-normal text-center tabletlg:w-full mobilelg:w-9/12">A one-stop repository of different resources for Front-End Developers and UI Designers.</p>
@@ -80,19 +69,14 @@ export default function Home({ resourcesData }) {
           <p className="mobilelg:text-18 mobile:text-14 text-white font-normal text-center tabletlg:w-full mobilelg:w-9/12">Use this to ideate, learn and connect, or whatever you want, you dirty nerd.</p>
         </div>
         <div className="absolute top-0">
-          <Image
-            src="/background.png"
-            alt="Background design"
-            width={1444}
-            height={472}
-          />
+          <Image src="/background.png" alt="Background design" width={1444} height={472} />
         </div>
       </header>
       <main role="main">
         <section className="sources">
           <div className="sm:mx-40 tabletlg:mx-20 mobilelg:mx-10 mobile:mx-4 flex flex-wrap justify-center items-center">
             {filteredTags.map((ft, i) => (
-              <button id={ ft } onClick={ (e) => {filterPlease(e)} } className="sources__button bg-accent text-white font-bold px-4 py-2 uppercase rounded-full mobilelg:text-14 mobile:text-12 m-1 transition-colors hover:bg-primary hover:text-secondary focus:outline-none" key={i}>{ft}<span className="bg-secondary text-primary font-normal text-11 rounded-full p-1 ml-2">{ Object.values(counts)[i] }</span></button>
+              <button id={ ft } onClick={ (e) => {filterByCat(e)} } className="sources__button bg-accent text-white font-bold px-4 py-2 uppercase rounded-full mobile:text-11 m-1 transition-colors hover:bg-primary hover:text-secondary focus:outline-none" key={i}>{ft}<span className="bg-secondary text-primary font-normal text-11 rounded-full p-1 ml-2">{ Object.values(counts)[i] }</span></button>
             ))}
           </div>
         </section>
@@ -102,7 +86,7 @@ export default function Home({ resourcesData }) {
             rd.sources.map(source => {source.tags.map(tag => {classArr.push(tag);})})
             let filteredClass = _.union(classArr);
             return (
-              <div key={ i } className={`cards__item bg-accent mobilelg:w-card mobile:w-cardsm h-card p-6 self-center ${filteredClass.map(ft => (ft)).join(" ")}`}>
+              <div key={ i } className={`cards__item bg-accent tabletlg:h-card mobilelg:w-card mobile:w-cardsm mobile:h-auto p-6 self-center overflow-hidden ${filteredClass.map(ft => (ft)).join(" ")}`}>
                 <div className="cards__item--details">  
                   <p className="text-24 text-primary text-center font-normal">{rd.name} <span>{ rd?.emoji }</span></p>
                   <p className="text-12 text-white text-center font-normal px-8">{rd.bio}</p>
@@ -114,7 +98,7 @@ export default function Home({ resourcesData }) {
                 </div>
                 <div className="cards__item--links overflow-y-scroll h-meat">
                   {rd?.sources?.map((source, i) => (
-                    <div key={ i } className="bg-secondary p-4 mb-4">
+                    <div key={ i } className="cards__item--content bg-secondary p-4 mb-4">
                       <div className="flex flex-row items-start mb-4">
                         <p className="text-white text-14 font-normal w-8/12">{ source.label }</p>
                         <a className="w-4/12" href={source.url} target="_blank" rel="noopener noreferrer"><img className="ml-auto mr-0" src="/linkout.svg"/></a>
