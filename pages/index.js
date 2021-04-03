@@ -76,7 +76,7 @@ export default function Home({ resourcesData }) {
         <section className="sources">
           <div className="sm:mx-40 tabletlg:mx-20 mobilelg:mx-10 mobile:mx-4 flex flex-wrap justify-center items-center">
             {filteredTags.map((ft, i) => (
-              <button id={ ft } onClick={ (e) => {filterByCat(e)} } className="sources__button bg-accent text-white font-bold px-4 py-2 uppercase rounded-full mobile:text-11 m-1 transition-colors hover:bg-primary hover:text-secondary focus:outline-none" key={i}>{ft}<span className="bg-secondary text-primary font-normal text-11 rounded-full p-1 ml-2">{ Object.values(counts)[i] }</span></button>
+              <button key={ i } id={ ft } onClick={ (e) => {filterByCat(e)} } className="sources__button bg-accent text-white font-bold px-4 py-2 uppercase rounded-full mobile:text-11 m-1 transition-colors hover:bg-primary hover:text-secondary focus:outline-none">{ft}<span className="bg-secondary text-primary font-normal text-11 rounded-full p-1 ml-2">{ Object.values(counts)[i] }</span></button>
             ))}
           </div>
         </section>
@@ -92,7 +92,7 @@ export default function Home({ resourcesData }) {
                   <p className="text-12 text-white text-center font-normal px-8">{rd.bio}</p>
                   <div className="flex flex-row flex-wrap items-center justify-center my-4">
                     {rd?.socials?.map((social, i) => (
-                      <a className="uppercase text-12 text-primary font-bold px-2" target="_blank" rel="noopener noreferrer" key={i} href={ social.url }>{ social.label }</a>
+                      <a key={i} className="uppercase text-12 text-primary font-bold px-2" target="_blank" rel="noopener noreferrer" href={ social.url }>{ social.label }</a>
                     ))}
                   </div>
                 </div>
@@ -105,7 +105,7 @@ export default function Home({ resourcesData }) {
                       </div>
                       <div className="flex flex-row flex-wrap">
                         {source?.tags?.map((tag, i) => (
-                          <span className="bg-accent text-white text-11 py-1 px-2 rounded-full uppercase mr-2 mt-2" key={i}>{ tag }</span>
+                          <span key={i} className="bg-accent text-white text-11 py-1 px-2 rounded-full uppercase mr-2 mt-2">{ tag }</span>
                         ))}
                       </div>
                     </div>

@@ -135,8 +135,8 @@ const SourceItem = ({ label, url, tags, setData, idx }) => {
           {url}
         </div>
       </div>
-      {tags.map((t) => (
-        <span className={'bg-accent px-2 py-1 rounded-full shadow text-11'}>
+      {tags.map((t,i) => (
+        <span key={ i }className={'bg-accent px-2 py-1 rounded-full shadow text-11'}>
           {t}
         </span>
       ))}
