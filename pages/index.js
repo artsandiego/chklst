@@ -42,22 +42,6 @@ export default function Home({ resourcesData }) {
     <>
       <Head>
         <title>C H K L S T.</title>
-        <link rel="icon" href="/favicon.png" />
-        <meta charSet="utf-8" />
-        <meta name="description" content="A one-stop repository of different resources for Front-End Developers and UI Designers."/>
-        <meta name="keywords" content="frontend, tools, crtved, artsandiego, website, ui, ux, web design, tips, resources"/>
-
-        <meta property="og:type" content="website"/>
-        <meta property="og:url" content="https://chklst.vercel.app"/>
-        <meta property="og:title" content="CHKLST."/>
-        <meta property="og:description" content="A one-stop repository of different resources for Front-End Developers and UI Designers."/>
-        <meta property="og:image" content="/social-image.png"/>
-
-        <meta property="twitter:card" content="summary_large_image"/>
-        <meta property="twitter:url" content="https://chklst.vercel.app"/>
-        <meta property="twitter:title" content="CHKLST."/>
-        <meta property="twitter:description" content="A one-stop repository of different resources for Front-End Developers and UI Designers."/>
-        <meta property="twitter:image" content="/social-image.png" />
       </Head>
       <header className="flex flex-col items-center justify-center relative mobile:px-4">
         <div className="mt-14">
@@ -101,7 +85,7 @@ export default function Home({ resourcesData }) {
                     <div key={ i } className="cards__item--content bg-secondary p-4 mb-4">
                       <div className="flex flex-row items-start mb-4">
                         <p className="text-white text-14 font-normal w-8/12">{ source.label }</p>
-                        <a className="w-4/12" href={source.url} target="_blank" rel="noopener noreferrer"><img className="ml-auto mr-0" src="/linkout.svg"/></a>
+                        <a className="w-4/12" href={source.url} target="_blank" rel="noopener noreferrer" aria-label="Link out"><img alt="Linkout icon" className="ml-auto mr-0" src="/linkout.svg"/></a>
                       </div>
                       <div className="flex flex-row flex-wrap">
                         {source?.tags?.map((tag, i) => (
