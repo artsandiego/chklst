@@ -6,7 +6,7 @@ Here are the steps to follow in order to properly contribute to the project.
 
 1. You can start contributing by forking this repo!
 2. Once cloned, duplicate the /components/contributors/[[name-sample.json]](https://github.com/crtved/prtflio/blob/main/components/contributors/[name-sample].json) file from your forked repo. 
-3. Rename duplicate file, lowercase with now special characters.
+3. Rename duplicate file, lowercase with no special characters.
 ```
 e.g. ricksanchez.json
 ```
