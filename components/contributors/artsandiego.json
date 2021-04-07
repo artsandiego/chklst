@@ -50,5 +50,12 @@
         "website"
       ]
     }
+    {
+      "label": "Design your own VS Code",
+      "url": "https://themes.vscode.one/",
+      "tags": [
+        "vscode",
+      ]
+    }
   ]
 }
